@@ -1,0 +1,26 @@
+<po-toolbar p-title="AppName"></po-toolbar>
+
+<po-menu [p-menus]="menus"></po-menu>
+
+<po-page-default p-title="AppName">
+    <div class="container d-flex justify-content-center align-items-start" style="height: 100vh;">
+        <div class="col-md-6">
+            <po-list-view
+            p-property-title="name"
+            [p-items]="items">
+            <ng-template p-list-view-content-template let-item>
+                <div class="po-row">
+                    <po-info class="po-md-12" p-label="Vaga-" [p-value]="item.Name"></po-info>
+                </div>
+                <div class="po-row">
+                    <po-info class="po-md-12" p-label="Descrição" [p-value]="item.Descricao"></po-info>
+                </div>
+                <div class="po-row">
+                    <po-info class="po-md-12" p-label="Habilidades" [p-value]="item.Requerimento"></po-info>
+                </div>
+            </ng-template>
+            </po-list-view>
+        </div>
+
+    </div>
+</po-page-default>

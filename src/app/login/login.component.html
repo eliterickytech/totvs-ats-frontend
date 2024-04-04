@@ -1,0 +1,16 @@
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-md-6">
+        <form #loginForm="ngForm">
+            <div class="form-group">
+                <po-login name="username"  [(ngModel)]="formLogin.Email"  p-placeholder="Digite seu Email" p-label="Email" ngModel > </po-login>
+            </div>
+            <div class="form-group">
+                <po-password name="password" [(ngModel)]="formLogin.Password" p-placeholder="Digite sua senha" p-label="Password" ngModel> </po-password>
+            </div>
+            <po-button p-label="Entrar" (p-click)="login()"> </po-button> ou 
+            <po-link p-label="Cadastre-se" p-url="/newuser"></po-link>
+
+        </form>
+    </div>
+  </div>
+  

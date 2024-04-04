@@ -1,0 +1,17 @@
+<po-container>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md-6">
+            <form #loginForm="ngForm">
+                <div class="form-group">
+                    <po-input name="name"  [(ngModel)]="formUser.name"  p-placeholder="Digite seu nome" p-label="Name" ngModel > </po-input>
+                    <po-email name="email" [(ngModel)]="formUser.email" p-placeholder="Digite seu email" p-label="Email" ngModel> </po-email>
+                    <po-password name="password" [(ngModel)]="formUser.password" p-label="Senha" ngModel> </po-password>
+                    <po-input name="input" [(ngModel)]="formUser.linkedin" p-label="LinkedIn" ngModel> </po-input>
+                    <po-input name="input" [(ngModel)]="formUser.phone" p-placeholder="11-99999-9999" p-label="Telefone" ngModel> </po-input>
+                    <po-multiselect name="multiselect" [(ngModel)]="formUser.habilities" p-label="Habilidades" p-placeholder="Selecione suas Habilidades" [p-options]="habilities"> </po-multiselect>
+                    <po-button p-label="Cadastrar" (p-click)="SaveNewUser()"> </po-button>
+                </div>
+            </form>
+        </div>
+    </div>
+</po-container>
